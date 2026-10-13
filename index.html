@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OreFinder — Minecraft Tools</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="pick">⛏</span><div><b>ORE<span>FINDER</span></b><small>MINECRAFT TOOLKIT</small></div></div><span class="pill">FREE • GITHUB PAGES</span></header>
+<main>
+<section class="hero"><div class="eyebrow">YOUR WORLD. YOUR NEXT FIND.</div><h1>Find your next<br><span>big discovery.</span></h1><p>Four handy tools for exploring Minecraft worlds. Choose a tool below to get started.</p></section>
+<nav class="tabs" aria-label="Tools">
+<button class="tab active" data-tab="seed">🌱 Seed Finder</button><button class="tab" data-tab="map">🗺 World Map</button><button class="tab" data-tab="screen">🖼 Screenshot Finder</button><button class="tab" data-tab="ingame">🧭 In-game Helper</button>
+</nav>
+<section class="panel active" id="seed">
+<div class="panel-head"><div><div class="eyebrow">TOOL 01</div><h2>World Seed Finder</h2><p>Save your seed and open a trusted world-map tool to explore locations.</p></div><span class="emoji">🌱</span></div>
+<label for="seedInput">World seed</label><input id="seedInput" placeholder="Enter your Minecraft world seed">
+<div class="two"><div><label for="edition">Edition</label><select id="edition"><option value="java">Java Edition</option><option value="bedrock">Bedrock Edition</option></select></div><div><label for="version">Version</label><select id="version"><option>1.21</option><option>1.21.1</option><option>1.21.4</option><option>1.21.5</option><option>1.21.8</option><option>1.21.11</option><option>Other / not sure</option></select></div></div>
+<button class="primary" id="openSeed">Open seed tools ↗</button><p class="note">Heads-up: this website does not calculate hidden ore blocks from a seed by itself. Seed-based maps can help explore terrain and structures; ore positions depend on version, world generation and terrain.</p>
+</section>
+<section class="panel" id="map">
+<div class="panel-head"><div><div class="eyebrow">TOOL 02</div><h2>World Map & Coordinates</h2><p>Keep coordinates, check ore height guides, and open a map tool.</p></div><span class="emoji">🗺️</span></div>
+<div class="two"><div><label for="x">X coordinate</label><input id="x" type="number" placeholder="e.g. 120"></div><div><label for="z">Z coordinate</label><input id="z" type="number" placeholder="e.g. -340"></div></div>
+<div class="two"><div><label for="ore">Ore</label><select id="ore"><option>Diamond</option><option>Ancient Debris</option><option>Iron</option><option>Gold</option><option>Redstone</option><option>Lapis Lazuli</option><option>Copper</option><option>Coal</option><option>Emerald</option></select></div><div><label for="y">Y level</label><input id="y" type="number" placeholder="e.g. -58"></div></div>
+<button class="primary" id="saveCoords">Save coordinates</button><div id="coordsResult" class="result hidden"></div>
+<div class="height-card"><b>Quick height reminder</b><p>For diamonds in modern Overworld versions, try mining deep underground around Y = -58 or -59, while watching for lava. Ore generation varies by version and biome.</p></div>
+</section>
+<section class="panel" id="screen">
+<div class="panel-head"><div><div class="eyebrow">TOOL 03</div><h2>Screenshot Ore Helper</h2><p>Upload a screenshot to zoom in and inspect visible blocks.</p></div><span class="emoji">🖼️</span></div>
+<label class="upload" for="imageInput"><span>＋</span><b>Choose a screenshot</b><small>PNG, JPG or WEBP · stays in your browser</small></label><input class="file-input" id="imageInput" type="file" accept="image/*">
+<div id="previewWrap" class="preview-wrap hidden"><img id="preview" alt="Uploaded Minecraft screenshot"><div class="zoom-row"><button id="zoomOut">−</button><span id="zoomLabel">100%</span><button id="zoomIn">＋</button><button id="clearImage" class="secondary">Remove image</button></div></div>
+<p class="note">This tool displays and zooms your screenshot; it does not automatically detect hidden or visible ores with AI. For best results, zoom in on the block and compare its texture with the ore guide.</p>
+<div class="ore-chips"><span>💎 Diamond</span><span>🟫 Ancient debris</span><span>🟨 Gold</span><span>⬜ Iron</span><span>🟥 Redstone</span><span>🟦 Lapis</span></div>
+</section>
+<section class="panel" id="ingame">
+<div class="panel-head"><div><div class="eyebrow">TOOL 04</div><h2>In-game Ore Helper</h2><p>A practical route toward an in-game overlay for your Minecraft setup.</p></div><span class="emoji">🧭</span></div>
+<div class="height-card"><b>What works in-game?</b><p>A normal GitHub Pages website cannot read your live Minecraft world or reveal hidden blocks. That needs a client-side mod, a server-side plugin with permission, or a supported world file.</p></div>
+<h3>Recommended setup</h3><ol><li>Use a Fabric mod for the Minecraft version you play.</li><li>Build a legitimate coordinate and mining helper first.</li><li>Only add world scanning for single-player worlds or servers where you have permission.</li></ol>
+<a class="link-card" href="https://fabricmc.net/develop/" target="_blank" rel="noreferrer"><span><b>Fabric development docs</b><small>Start a Java Edition mod project</small></span><span>↗</span></a>
+<a class="link-card" href="https://github.com/" target="_blank" rel="noreferrer"><span><b>GitHub</b><small>Store your code and publish this site</small></span><span>↗</span></a>
+</section>
+<section class="footer-card"><b>⛏ Built for explorers</b><p>This is an independent fan-made tool and is not affiliated with Mojang or Microsoft.</p></section>
+</main>
+<footer>ORE<span>FINDER</span> · A fan-made Minecraft toolkit</footer>
+<script src="app.js"></script>
+</body></html>
